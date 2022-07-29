@@ -9,5 +9,7 @@ public class ProjetoWebServicesComSpringBootEJpaHibernateApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetoWebServicesComSpringBootEJpaHibernateApplication.class, args);
 	}
+	
+	
 
 }
