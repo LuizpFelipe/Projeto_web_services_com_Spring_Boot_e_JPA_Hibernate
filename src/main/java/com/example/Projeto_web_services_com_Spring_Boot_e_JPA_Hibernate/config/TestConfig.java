@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.entities.User;
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.CategoryRepository;
+import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.OrderItemRepository;
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.OrderRepository;
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.ProductRepository;
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.UserRepository;
@@ -28,6 +29,9 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Autowired
 	private ProductRepository produtcRepository;
+	
+	@Autowired
+	private OrderItemRepository orderItemRepository;
 	@Override
 	public void run(String... args) throws Exception {
 		User u1 = new User(null, "Maria Brown", "maria@gmail.com", "988888888", "123456");
