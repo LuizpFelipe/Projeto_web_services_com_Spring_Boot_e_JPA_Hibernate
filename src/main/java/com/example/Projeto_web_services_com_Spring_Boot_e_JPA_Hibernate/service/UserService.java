@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.entities.User;
 import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.repository.UserRepository;
+import com.example.Projeto_web_services_com_Spring_Boot_e_JPA_Hibernate.service.exception.ResourceNotFoundException;
 
 
 @Service
@@ -23,7 +24,7 @@ public class UserService {
 	
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(()-> new ResourceNotFoundException(id));
 	}
 	
 	public User insert(User objt) {
